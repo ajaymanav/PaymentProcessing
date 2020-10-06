@@ -24,7 +24,6 @@ namespace PaymentProcessing.BusinessRules
             builder.Register((c, p) => new MembershipEmail(p.TypedAs<Payment>())).As<IRule>();
             builder.Register((c, p) => new MembershipUpgradation(p.TypedAs<Payment>())).As<IRule>();
             builder.Register((c, p) => new PackingSlipGenerationForShipping(p.TypedAs<Payment>())).As<IRule>();
-            builder.Register((c, p) => new DefaultRule(p.TypedAs<Payment>())).As<IRule>();
 
             return builder.Build();
         }
