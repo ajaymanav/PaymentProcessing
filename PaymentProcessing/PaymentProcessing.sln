@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessing.BusinessRules", "PaymentProcessing.BusinessRules\PaymentProcessing.BusinessRules.csproj", "{EF238673-DE47-4C9C-9D94-01B29081C983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessing.Client", "PaymentProcessing.Client\PaymentProcessing.Client.csproj", "{4B9AB356-5652-4D39-9247-8099753A5DCD}"
+EndProject
+Global
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+EndGlobalSection
+GlobalSection(ProjectConfigurationPlatforms) = postSolution
+{EF238673-DE47-4C9C-9D94-01B29081C983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{EF238673-DE47-4C9C-9D94-01B29081C983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{EF238673-DE47-4C9C-9D94-01B29081C983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{EF238673-DE47-4C9C-9D94-01B29081C983}.Release|Any CPU.Build.0 = Release|Any CPU
+{4B9AB356-5652-4D39-9247-8099753A5DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{4B9AB356-5652-4D39-9247-8099753A5DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{4B9AB356-5652-4D39-9247-8099753A5DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{4B9AB356-5652-4D39-9247-8099753A5DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+EndGlobalSection
+GlobalSection(SolutionProperties) = preSolution
+HideSolutionNode = FALSE
+EndGlobalSection
+GlobalSection(ExtensibilityGlobals) = postSolution
+SolutionGuid = {6E60072C-6755-4C5D-9F90-4429D9C24163}
+EndGlobalSection
+EndGlobal
