@@ -1,0 +1,45 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PaymentProcessing.BusinessRules.Enums;
+using PaymentProcessing.BusinessRules.Models;
+using PaymentProcessing.BusinessRules.Rules.ConcreteRules;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PaymentProcessing.BusinessRules.Tests.ConcreteRules
+{
+    [TestClass]
+    public class PackingSlipGenerationForShippingTests
+    {
+        [DataTestMethod]
+        [DataRow(1, "Laptop", ProductType.Physical)]
+        
+
+        public void IsApplicable_Success_Test(int id, string productName, ProductType productType)
+        {
+            var payment = new Payment(new Product(id, productName, productType));
+            var rule = new PackingSlipGenerationForShipping(payment);
+
+            var result = rule.IsApplicable();
+
+            Assert.IsTrue(result);
+        }
+
+        [DataTestMethod]
+        [DataRow(2, "Microservices", ProductType.Book)]
+        [DataRow(3, "Membership activation", ProductType.Membership)]
+        [DataRow(4, "Membership upgradation", ProductType.Membership)]
+        [DataRow(5, "Learning to Ski", ProductType.Video)]
+        public void IsApplicable_Failed_Test(int id, string productName, ProductType productType)
+        {
+            var payment = new Payment(new Product(id, productName, productType));
+            var rule = new PackingSlipGenerationForShipping(payment);
+
+            var result = rule.IsApplicable();
+
+            Assert.IsFalse(result);
+        }
+    }
+}
